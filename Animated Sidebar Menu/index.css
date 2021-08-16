@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url("./michael-rogers-rnKqWvO80Y4-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+nav{
+    background-color: #fff;
+    max-width:300px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    box-shadow:inset rgba(0,0,0,0.5);
+    transform: translateX(-100%);
+    position: relative;
+    transition: .4s ease;
+
+}
+
+ul{
+    list-style: none;
+
+}
+
+li{
+    text-align: right;
+    padding:7px;
+}
+
+a{
+    text-decoration:none;
+    font-size: 26px;
+    color:#1d1d1d;
+    
+}
+
+a:hover{
+    color:#007DF6;
+}
+
+li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.toggle{
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translateX(100%);
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: white;
+}
+
+.toggle:focus{
+    outline: white;
+}
+
+.menu{
+    display: block;
+    margin:0;
+    
+}
+
+
+.close{
+    display: none;
+    margin:0;
+    
+}
+
+nav.active{
+    transform: translateX(0);
+    
+}
+
+nav.active .toggle .menu{
+    display:none;
+}
+
+nav.active .toggle .close{
+    display:block;
+}

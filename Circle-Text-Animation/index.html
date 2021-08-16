@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Circle Text Animation | Splitting.js</title>
+        <link rel="stylesheet" href="index.css">
+
+    </head>
+    <body>
+        
+        <div class="circle" data-splitting>
+            Legendary Baba        
+        </div>
+
+        <script src="splitting.js"></script>
+        <script> Splitting(); </script>
+
+        <script>
+            let circle = document.querySelector('.circle')
+            window.onmousemove = function(e){
+                let x = e.clientX/+2;
+                circle.style.transform = "perspective(1000px) rotateY("+ x+"deg) rotateX(15deg)";
+            }
+        </script>
+    </body>
+</html>
